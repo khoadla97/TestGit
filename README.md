@@ -1,6 +1,6 @@
 # Luanvan_ACAM
 Nhận diện hành động bằng attention maps.
-Thực hiện: Đặng Lê Anh Khoa và Nguyễn Khắc Trung Tín. Sinh viên trường Đại h
+Thực hiện: Đặng Lê Anh Khoa và Nguyễn Khắc Trung Tín. Sinh viên trường Đại học Bách Khoa Hồ Ch
 
 Cài đặt các thư viện và dowload các model tại: https://github.com/oulutan/ACAM_Demo
 
