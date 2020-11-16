@@ -2,12 +2,12 @@ Hello everyone,
 
 My name is Dang Le Anh Khoa, I come from SS1 RCar Communication Gateway team. Today's topic, I would like to talk about AI as know as artificial intelligence. So, nowadays, AI is very popular, everyone knows and talks about AI. But do you know why AI is growing like that?
 
-In fact, the idea of creating a ‘thinking’ machine is at least as old as modern computing. In the 1940s, Alan Turing in his seminal paper ‘Computing Machinery and Intelligence’ laid out whether a machine could be said to be intelligent, which has since become known as the ‘Turing test’. In the 1980s, The algorithms convolutional neural nets to recognize handwritten digits were invented.
+In fact, the idea of creating a ‘thinking’ machine is appearance very soon. In the 1940s, Alan Turing in his paper laid out whether a machine could be said to be intelligent, which has since become known as the ‘Turing test’. In the 1980s, The algorithms convolutional neural nets to recognize handwritten digits were invented.
 
 Although AI was researched very soon, the breakthrough only came in 2012. I think there is two main reasons: 
 + Appearance of large, high-quality labeled datasets leads by Google, Microsoft, and Facebook. And many of them are free. 
-+ parallel computing with GPUs => so the training time was shorted many times.
-And some other reason like: 
++ parallel computing with GPUs.  with 100s-1000s of cores running parallel was helped the algorithm can run very fast than CPU. 
+Besides, it also have some other reason like: 
 + New regularization techniques: dropout, batch normalization, data augmentation
 + Many library support for training deep network with GPUs:  tensorflow, pytorch, keras, …
 
