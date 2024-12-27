@@ -42,7 +42,13 @@
     <div id="text"></div>
     <div class="box">
         <canvas id="pinkboard"></canvas>
+        <div id="image-container">
+            <img id="image1" src="D:/Github/TestGit/Project/image1.jpg" style="display:none;">
+            <img id="image2" src="D:/Github/TestGit/Project/image2.jpg" style="display:none;">
+            <!-- Add more images as needed -->
+        </div>
     </div>
+
     <script>
         var settings = {
             particles: {
@@ -53,8 +59,35 @@
                 size: 8, // particle size in pixels
             },
         };
+        var images = [
+            "D:/Github/TestGit/Project/image1.jpg",
+            "D:/Github/TestGit/Project/image2.jpg",
+            // Add more image paths as needed
+        ];
+        function showNextImage() {
+            var imageContainer = document.getElementById('image-container');
+            var images = imageContainer.getElementsByTagName('img');
+            for (var i = 0; i < images.length; i++) {
+                images[i].style.display = 'none';
+            }
+            var imageIndex = textIndex % images.length;
+            images[imageIndex].style.display = 'block';
+        }
 
-        var texts = ["Phụng ơi", "Khoa muốn nói với Phụng", "Khoa thương Phụng nhiều lắm"];
+
+          var texts = 
+        ["",
+        "Phụng ơi", 
+        "Chúc mừng sinh nhật Phụng nha",
+        "Khoa chúc Phụng luôn vui vẻ, hạnh phúc",
+        "Khoa chúc Phụng sẽ đạt được những gì mình mong muốn",
+        "Khoa biết Phụng của Khoa rất giỏi giang, mạnh mẽ, xinh đẹp",
+        "Khoa biết Phụng của Khoa rất dễ thương, ấm áp",
+        "Khoa muốn Phụng biết KHoa sẽ luôn bên Phụng",
+        "Và, Khoa muốn nói với Phụng rằng", "Khoa thích Phụng",
+        "Khoa yêu Phụng",
+        "Khoa thương Phụng",
+        "Happy Birthday My girl <3"];
         var textIndex = 0;
         var textElement = document.getElementById('text');
         var textInterval;
@@ -70,16 +103,17 @@
 
         function startTextAnimation() {
             showNextText();
+            showNextImage();
             textInterval = setInterval(showNextText, 5000);
         }
 
         startTextAnimation();
-
+        var totalTextDuration = texts.length * 5 * 1000;
         // Hide the text and stop the text animation after 15 seconds
         setTimeout(function() {
             clearInterval(textInterval);
             textElement.style.opacity = 0;
-        }, 15000);
+        }, totalTextDuration);
 
 
         /*
@@ -317,7 +351,7 @@
             setTimeout(function () {
                 onResize();
                 render();
-            }, 15000); // delay rendering by 15 seconds
+            }, totalTextDuration); // delay rendering by 15 seconds
         })(document.getElementById('pinkboard'));
     </script>
 </BODY>
